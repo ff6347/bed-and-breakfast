@@ -1,5 +1,16 @@
 body {
-
-  font: normal  1.1em/1.1em  "Georgia";
+  font: normal 1.1em/1.1em;
   line-height: 1.4em;
+  padding: 60px;
+  font-family: "calluna", serif;
+}
+/***********************
+Overwrite Bootstrap CSS
+************************/
+.hero-unit {
+  font-family: "calluna";
+  background-color: #ffffff;
+}
+.hero-unit h1 {
+  font-size: 3em;
 }
