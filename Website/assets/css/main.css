@@ -3,27 +3,32 @@ Main CSS build with .less
 by pdxiii & fabiantheblind
 Copyright © 2012
 ************************/
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
 .container h1,
 .container h2,
 .container h3,
 .container h4,
 .container h5 {
-  font-family: "calluna", serif !important;
+  font-family: "calluna", Georgia, serif !important;
 }
 .container p {
-  font-size: 1.3em !important;
+  font-size: 1.1em !important;
 }
 .container li {
-  line-height: 1.6em;
-  font-size: 1.3em;
+  line-height: 1.5em;
+  font-size: 1.1em;
 }
 body {
-  line-height: 1.6em !important;
+  line-height: 1.5em !important;
   padding: 60px;
-  font-family: "calluna", serif, serif;
+  font-family: "calluna", Georgia, serif, serif;
+  font-size: 1.1em;
 }
 body a {
-  font-size: 1.3em;
   color: #60001b;
 }
 body a:hover {
@@ -33,7 +38,7 @@ body a:hover {
 Overwrite Bootstrap CSS
 ************************/
 .hero-unit {
-  font-family: "calluna", serif;
+  font-family: "calluna", Georgia, serif;
   background-color: #ffffff;
 }
 .hero-unit h1 {

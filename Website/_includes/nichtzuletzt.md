@@ -18,7 +18,7 @@ disqus???
 
 ####Website:  
 
-Peter Sekan & [Fabian Morón Zirfas](http://fabiantheblind.info)  
+[Peter Sekan](http://twitter.com/PDXIII) & [Fabian Morón Zirfas](http://fabiantheblind.info)  
 Diese Website wurde mit [jekyll](http://jekyllrb.com/), [Twitter Bootstrap](http://twitter.github.com/bootstrap/) und [subtlepatterns](http://subtlepatterns.com) entwickelt.  
 
 
