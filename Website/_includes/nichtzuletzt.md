@@ -6,12 +6,20 @@ disqus???
 
 ###Facebook  
 
-[FB](http://facebook.com)
+[FaceBook](http://facebook.com)
 
 ###Impressum  
 
-Fotos: Betty Myller, Harald Grohrock, Lutz & Laila Kleveman
-Website: Peter Sekan & [Fabian Morón Zirfas](http://fabiantheblind.info) Diese Website wurde mit [jekyll](http://jekyllrb.com/), [Twitter Bootstrap](http://twitter.github.com/bootstrap/) und [subtlepatterns](http://subtlepatterns.com) entwickelt.  
+####Fotos:  
+
+- Betty Myller  
+- Harald Grohrock  
+- Lutz & Laila Kleveman  
+
+####Website:  
+
+Peter Sekan & [Fabian Morón Zirfas](http://fabiantheblind.info)  
+Diese Website wurde mit [jekyll](http://jekyllrb.com/), [Twitter Bootstrap](http://twitter.github.com/bootstrap/) und [subtlepatterns](http://subtlepatterns.com) entwickelt.  
 
 
 ###Links: 

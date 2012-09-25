@@ -1,12 +1,52 @@
+/***********************
+Main CSS build with .less
+by pdxiii & fabiantheblind
+Copyright © 2012
+************************/
 @hero-bg-col: #ffffff;
-@calluna : "calluna";
 
+@calluna : "calluna", serif;
+
+@fontsz: 1.3em;
+
+@lineheight: 1.6em;
+
+@col-link: #60001b;
+
+@col-hoover: #ff0047;
+
+
+.container{
+
+	h1, h2, h3, h4, h5{
+		font-family:@calluna !important;
+	}
+
+	p{
+		font-size: @fontsz !important;
+	}
+	li {
+		line-height:@lineheight;
+
+		font-size: @fontsz;
+	}
+}
 body {
-
-  font: normal  1.1em/1.1em;
-  line-height: 1.4em;
+  // font: normal  1.3em/1.3em !important;
+  line-height: @lineheight !important;
   padding:60px;
   font-family: @calluna ,serif;
+
+  a { 
+  	font-size:@fontsz;
+
+  	color:@col-link;
+
+  	&:hover{ 
+  		color: @col-hoover;
+  	}
+  }
+
 }
 
 
@@ -19,7 +59,6 @@ font-family: @calluna;
 background-color: @hero-bg-col;
 
 	h1{
-	font-size: 3em;
-
+	font-size: 3em !important;
 	}
 }
