@@ -5,18 +5,25 @@ Copyright © 2012
 ************************/
 @hero-bg-col: #ffffff;
 
-@calluna : "calluna", serif;
+@calluna : "calluna", Georgia, serif;
 
-@fontsz: 1.3em;
+@fontsz: 1.1em;
 
-@lineheight: 1.6em;
+@lineheight: 1.5em;
 
 @col-link: #60001b;
 
 @col-hoover: #ff0047;
 
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 
 .container{
+
 
 	h1, h2, h3, h4, h5{
 		font-family:@calluna !important;
@@ -36,9 +43,9 @@ body {
   line-height: @lineheight !important;
   padding:60px;
   font-family: @calluna ,serif;
+  font-size:@fontsz;
 
   a { 
-  	font-size:@fontsz;
 
   	color:@col-link;
 

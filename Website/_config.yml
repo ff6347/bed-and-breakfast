@@ -1,3 +1,6 @@
 markdown: rdiscount
 pygments: true
 exclude: /ignore /less
+slideshow:
+    width: 150
+    height: 100
