@@ -1,16 +1,41 @@
+/***********************
+Main CSS build with .less
+by pdxiii & fabiantheblind
+Copyright © 2012
+************************/
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5 {
+  font-family: "calluna", serif !important;
+}
+.container p {
+  font-size: 1.3em !important;
+}
+.container li {
+  line-height: 1.6em;
+  font-size: 1.3em;
+}
 body {
-  font: normal 1.1em/1.1em;
-  line-height: 1.4em;
+  line-height: 1.6em !important;
   padding: 60px;
-  font-family: "calluna", serif;
+  font-family: "calluna", serif, serif;
+}
+body a {
+  font-size: 1.3em;
+  color: #60001b;
+}
+body a:hover {
+  color: #ff0047;
 }
 /***********************
 Overwrite Bootstrap CSS
 ************************/
 .hero-unit {
-  font-family: "calluna";
+  font-family: "calluna", serif;
   background-color: #ffffff;
 }
 .hero-unit h1 {
-  font-size: 3em;
+  font-size: 3em !important;
 }
