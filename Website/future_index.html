@@ -117,8 +117,16 @@ title: Bett & Bread "Helene"
 </div> <!-- close kontaktundanfahrt -->
 
 <div class="span10 offset1">
-{% capture nichtzuletzt %}
-{% include nichtzuletzt.md %}
+{% include disqus.html %}
+</div>  
+
+<div class="span10 offset1">
+{% capture links %}
+{% include links.md %}
 {% endcapture %}
-{{ nichtzuletzt | markdownify }}
+{{ links | markdownify }}
 </div> <!-- close nichtzuletzt -->
+
+<div class="span12">
+	<a href="/impressum.html">impressum</a>
+</div>
