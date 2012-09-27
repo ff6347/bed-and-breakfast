@@ -1,27 +1,6 @@
 ##Preise & Policy  
 
-###Preise  
-
-- €78,- im Doppelzimmer pro Nacht (€39,- pro Person)
-- €59,- im Einzelzimmer pro Nacht
-- €00,- Suite Bellevue Bed & Bread Suite Bellevue als Ferienwohnung
-
-inklusive Frühstück  
-
-<br>  
-
 Bei längeren Aufenthalten sind Vergünstigungen möglich
 Kinder bis vier Jahre übernachten kostenlos. Kinderbetten sind vorhanden.  
 Die Suite Bellevue verfügt über zwei Schlafzimmer, einem Wohnzimmer mit Sofa und Fernseher, Esstisch und einer vollausgestatteten Küche. Sie können Sie in der Bed&Bread Variante oder als Ferienwohnung mieten.  
-
-###Policy  
-
-- Kinder bis vier Jahre freie Übernachtung  
-- leider keine Haustiere  
-- Nicht-Raucherhaus  
-- Check-in ab 16 Uhr  
-- Check-out 12 Uhr  
-- Zahlweise Cash  
-
-
 
