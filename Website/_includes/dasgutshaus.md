@@ -6,13 +6,12 @@ Das Pensionat, das damals in einem Baedecker-Reiseführer über die Nordseeküst
 Der Erste Weltkrieg zerstört die Idylle auf Gut Ankelohe. Von den drei Söhnen, allesamt Offizieren, wird einer in Belgien verwundet, der zweite fällt in Frankreich, der dritte Hans-Heinrich gerät in russische Kriegsgefangenschaft. Nach seiner Rückkehr übernimmt er das Gut, zusammen mit seiner Frau Theda. Zehn Jahre nach Ende des Zweiten Weltkriegs übergibt Hans-Heinrich die Landwirtschaft an seinen Sohn Udo und dessen Frau Reinhild, die erstmals auch Feriengäste im Gutshaus aufnimmt.  
 Helenes Urenkel Lutz und dessen junge Frau Laila leben und arbeiten nun auf Gut Ankelohe und sanierten die maroden, alten Stallungen und bauten das Gut zum heutigen Seminar- und Ferienhof aus. Um an die Lebensleistung gerade der weiblichen Vorfahren auf Gut Ankelohe zu erinnern und vielleicht die friedliche Idylle aus der Mädchenpensionats-Zeit vor dem Ersten Weltkrieg wieder aufleben zu lassen, haben Lutz und Laila Kleveman das neue Bed&Breakfast im Gutshaus nach der Urgroßmutter Helene benannt.  
   
-----------------  
+
   
 ##2 Fotos aus der Auswahl alte Fotos
 gusthaus_postkarte  
 helene_kleveman  
 
-----------------  
   
 Seine Familiengeschichte hat Urenkel Lutz Kleveman in seinem Buch ‚Kriegsgefangen‘ (2011 Siedler Verlag) aufgeschrieben. Wie es wohl damals auf Gut Ankelohe zugegangen sein mag, erläutert dieses Zitat:  
 > "Schon als ich mir die Photos von vor hundert Jahren angesehen hatte, kamen sie mir vor wie aus einer anderen Welt, die lange untergegangen war. Sicher, ich erkannte das schnörkellos nüchterne, mit Efeu und wildem Wein umrankte Gutshaus wieder und einige ziegelrote Stallungen, damals noch mit Reet gedeckt, dann die Dorfstraße, seinerzeit noch mit Kopfsteinpflaster, auch junge Bäume auf dem Hof, die heute alte Riesen sind. Aber was trugen diese Menschen, meine Vorfahren, doch für sonderbare Kleidung, wie ernst waren ihre Gesichter, wie bescheiden sahen die Möbel aus, wie altmodisch die Kutschen."  

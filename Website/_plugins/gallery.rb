@@ -29,9 +29,6 @@ module Jekyll
 			Dir.glob('assets/images/slideshow/*.jpg').each {
 				|i| output << "<div class=\"item\">
 				<img src=\"#{i}\" alt="">
-				 <div class=\"carousel-caption\">
-        		<p>#{i}</p>
-      			</div>
       			</div>"
 			}
 			output
