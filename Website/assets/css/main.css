@@ -19,10 +19,6 @@ Copyright © 2012
 .container p {
   font-size: 1.1em !important;
 }
-.container li {
-  line-height: 1.5em;
-  font-size: 1.1em;
-}
 body {
   line-height: 1.5em !important;
   padding: 60px;
@@ -35,6 +31,41 @@ body a {
 body a:hover {
   color: #ff0047;
 }
+#separator {
+  width: 100%;
+  text-align: center;
+}
+/*********************************
+	Bereich Bett and Bread
+*********************************/
+/*********************************
+	Bereich Lightbox
+*********************************/
+/*********************************
+	Bereich Ankelohe und Umgebung
+*********************************/
+#ankeloheundumgebung li,
+#umgebung li,
+#facilities li {
+  font-size: 0.9em;
+}
+/*********************************
+	Bereich Preise und policy
+*********************************/
+#preiseundpolicyrow li,
+#policy li,
+#preise li {
+  font-size: 0.9em;
+}
+/*********************************
+	BereichKontakt und anfahrt Maps und facebook
+*********************************/
+/*********************************
+	Bereich Links
+*********************************/
+/*********************************
+	Impressum.html is an own page
+*********************************/
 /***********************
 Overwrite Bootstrap CSS
 ************************/
