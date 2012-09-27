@@ -1,0 +1,124 @@
+---
+layout: default
+title: Bett & Bread "Helene"
+---
+
+<div class="span12">
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+        {{ '' | gallery }}
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>  
+</div>
+
+<div class="span10 offset1">
+
+{% capture welcome %}
+{% include welcome.md %}
+{% endcapture %}
+{{ welcome | markdownify }}  
+
+</div> <!-- close welcome --> 
+
+<div class="row" id="bettandbread">
+	<div class="span10 offset1">
+	    <h2>Bett &amp; Bread</h2>
+	</div>  
+	<div class="span5 offset1">
+{% capture bettandbread %}
+{% include bettandbread.md %}
+{% endcapture %}
+{{ bettandbread | markdownify }}
+	</div>
+	<div class="span5">
+{% capture fruehstueck %}
+{% include fruehstueck.md %}
+{% endcapture %}
+{{ fruehstueck | markdownify }}  
+	</div>  
+</div>  <!-- close bettandbread row -->
+
+<div class="span12">
+	<h2>Gallerie Lightbox</h2>
+</div>  
+
+<div class="span10 offset1">
+{% capture dasgutshaus %}
+{% include dasgutshaus.md %}
+{% endcapture %}
+{{ dasgutshaus | markdownify }}
+</div> <!-- close dasgutshaus -->
+
+
+<div class="span10 offset1" id="headline_akuu">
+	<h2>Gut Ankelohe &amp; Umgebung</h2>
+</div>
+
+<div class="row" id="ankeloheundumgebung">
+    <div class="span4 offset1">
+{% capture ankelohe %}
+{% include ankelohe.md %}
+{% endcapture %}
+{{ ankelohe | markdownify }}
+	</div>
+	
+	<div class="span4">
+{% capture umgebung %}
+{% include umgebung.md %}
+{% endcapture %}
+{{ umgebung | markdownify }}
+	</div>
+	<div class="span2">
+{% capture facilities %}
+{% include facilities.md %}
+{% endcapture %}
+{{ facilities | markdownify }}
+	</div>
+</div> <!-- close ankeloheundumgebung row -->
+
+
+<div class="span10 offset1">
+{% capture preiseundpolicy %}
+{% include preiseundpolicy.md %}
+{% endcapture %}
+{{ preiseundpolicy | markdownify }}  
+</div> <!-- close preiseundpolicy intro -->
+
+<div class="row" id="preiseundpolicy">
+	<div class="span5 offset1">
+{% capture preise %}
+{% include preise.md %}
+{% endcapture %}
+{{ preise | markdownify }}
+	</div>
+	<div class="span5 offset1">
+{% capture policy %}
+{% include policy.md %}
+{% endcapture %}
+{{ policy | markdownify }}
+	</div>
+</div> <!-- close preiseundpolicy -->
+
+<div class="row" id="kontaktundanfahrt">
+	<div class="span5 offset1">
+{% capture kontakt %}
+{% include kontakt.md %}
+{% endcapture %}
+{{ kontakt | markdownify }}
+	</div>
+	<div class="span5 offset1">
+{% capture anfahrt %}
+{% include anfahrt.md %}
+{% endcapture %}
+{{ anfahrt | markdownify }}
+	</div>
+</div> <!-- close kontaktundanfahrt -->
+
+<div class="span10 offset1">
+{% capture nichtzuletzt %}
+{% include nichtzuletzt.md %}
+{% endcapture %}
+{{ nichtzuletzt | markdownify }}
+</div> <!-- close nichtzuletzt -->
