@@ -3,16 +3,19 @@ layout: default
 title: Bett & Bread "Helene"
 ---
 
-<div class="span12">
+<div class="row">
+	<div class="span12">
 <div id="myCarousel" class="carousel slide">
     <div class="carousel-inner">
         {{ '' | gallery }}
     </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+   <!--  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
 </div>  
 </div>
+</div>
 
+<div class="row">
 <div class="span12" id="welcome">
 
 {% capture welcome %}
@@ -20,7 +23,8 @@ title: Bett & Bread "Helene"
 {% endcapture %}
 {{ welcome | markdownify }}  
 
-</div> <!-- close welcome --> 
+</div> <!-- close welcome -->
+</div>
 
 <div class="row" id="bettandbreadrow">
 	<div class="span12">
@@ -40,21 +44,30 @@ title: Bett & Bread "Helene"
 	</div>  
 </div>  <!-- close bettandbread row -->
 
-<div class="span12" id="lightbox">
-	<h2>Gallerie Lightbox</h2>
-</div>  
 
-<div class="span12">
+<div class="row">
+	<div class="span12" id="lightbox">
+ 	<h2>Gallerie Lightbox</h2>
+ </div>
+</div> 
+
+{% include separator.html %}
+
+<div class="row">
+	<div class="span12">
 {% capture dasgutshaus %}
 {% include dasgutshaus.md %}
 {% endcapture %}
 {{ dasgutshaus | markdownify }}
 </div> <!-- close dasgutshaus -->
-
-
-<div class="span12" id="headline_akuu">
-	<h2>Gut Ankelohe &amp; Umgebung</h2>
 </div>
+
+
+{% include separator.html %}
+
+<div class="row"><div class="span12" id="headline_akuu">
+	<h2>Gut Ankelohe &amp; Umgebung</h2>
+</div></div>
 
 <div class="row" id="ankeloheundumgebung">
 <div class="span4">
@@ -64,44 +77,52 @@ title: Bett & Bread "Helene"
 {{ ankelohe | markdownify }}
 </div>
 
-<div class="span4" id="facilities">
+<div class="span3" id="facilities">
 {% capture facilities %}
 {% include facilities.md %}
 {% endcapture %}
 {{ facilities | markdownify }}
 </div>
 
-	<div class="span4" id="umgebung">
+	<div class="span5" id="umgebung">
 {% capture umgebung %}
 {% include umgebung.md %}
 {% endcapture %}
 {{ umgebung | markdownify }}
-	</div>
+</div>
 
 </div> <!-- close ankeloheundumgebung row -->
 
 
+{% include separator.html %}
+
+<div class="row">
 <div class="span12" id="preiseundpolicyintro">
 {% capture preiseundpolicy %}
 {% include preiseundpolicy.md %}
 {% endcapture %}
 {{ preiseundpolicy | markdownify }}  
 </div> <!-- close preiseundpolicy intro -->
+</div>
 
 <div class="row" id="preiseundpolicyrow">
-	<div class="span6" id="preise">
+
+<div class="span6" id="preise">
 {% capture preise %}
 {% include preise.md %}
 {% endcapture %}
 {{ preise | markdownify }}
-	</div>
-	<div class="span6" id="policy">
+</div>
+
+<div class="span6" id="policy">
 {% capture policy %}
 {% include policy.md %}
 {% endcapture %}
 {{ policy | markdownify }}
-	</div>
+</div>
 </div> <!-- close preiseundpolicy -->
+
+
 
 <div class="row" id="kontaktundanfahrtrow">
 	<div class="span6" id="kontakt">
@@ -118,17 +139,18 @@ title: Bett & Bread "Helene"
 	</div>
 </div> <!-- close kontaktundanfahrt -->
 
-<div class="span12" id="gestbook">
-{% include disqus.html %}
-</div>  
 
-<div class="span12" =id="links">
+<div class="row">
+	<div class="span12" =id="links">
 {% capture links %}
 {% include links.md %}
 {% endcapture %}
 {{ links | markdownify }}
 </div> <!-- close nichtzuletzt -->
-
-<div class="span12" id="impressum">
-	<a href="/impressum.html">impressum</a>
 </div>
+
+<div class="row">
+<div class="span12" id="impressum">
+<a href="/impressum.html">impressum</a> <br>
+<a href="/guestbook.html">guestbook</a> <br>
+</div></div>
