@@ -152,7 +152,7 @@ body {
   font-family: "calluna", Georgia, Times, serif;
   font-size: 20px;
   line-height: 30px;
-  color: #ffffcc;
+  color: #eeeeee;
   background-color: #333333;
 }
 a {
@@ -7340,6 +7340,17 @@ body {
   padding: 60px;
   background-image: url(../images/DarkWaveCut.png);
 }
+a,
+a:hover {
+  font-family: "calluna-sans", Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover,
+a:active {
+  outline: none;
+}
 #separator {
   width: 100%;
   text-align: center;
@@ -7378,7 +7389,6 @@ Overwrite Bootstrap CSS
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
-  height: 40px;
 }
 #navLinks {
   width: 80%;
@@ -7394,4 +7404,36 @@ Overwrite Bootstrap CSS
   height: 60px;
   width: 90%;
   margin-left: 5%;
+}
+#desktopnav {
+  background-color: #333333;
+  height: 45px;
+}
+#bottombar {
+  background-color: #333333;
+  height: 60px;
+}
+#desktopnav a {
+  float: left;
+  display: block;
+  padding: 10px 20px 0px 0px;
+  text-align: left;
+}
+#desktopnav a:last-child {
+  padding-top: 0px;
+  padding-right: 50px;
+  float: right;
+}
+#desktopnav a:first-child {
+  padding-left: 50px;
+}
+#bottombar a {
+  padding-top: 14px;
+  padding-right: 50px;
+  float: right;
+}
+#bottombar h2 {
+  padding-top: 8px;
+  padding-left: 50px;
+  display: inline;
 }

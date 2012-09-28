@@ -18,7 +18,8 @@ Copyright © 2012
 
 @headingsFontFamily:	@sansFontFamily;
 @headingsFontWeight:	normal;
-@textColor:				#ffffcc;
+// @textColor:				#ffffcc;
+@textColor:				@grayLighter;
 @baseLineHeight:		30px;
 @baseFontSize:			20px;
 
@@ -27,12 +28,26 @@ Copyright © 2012
 
 @darkRed:				#660000;
 
+@fixedBarMargins: 		50px;
+
+
+
+body {
+  padding: 60px;
+  background-image: url(../images/DarkWaveCut.png);
+}
+
+a, a:hover{
+	font-family: @sansFontFamily;
+	font-size: 0.8em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+a:hover, a:active{
+	outline: none;
+}
 
 .container{
-}
-body {
-  padding:60px;
-  background-image: url(../images/DarkWaveCut.png);
 }
 
 #separator{
@@ -150,7 +165,6 @@ Overwrite Bootstrap CSS
 .navbar-fixed-top,
 .navbar-fixed-bottom {
 	position: fixed;
-	height: 40px;
 }
 #navLinks{
 	width: 80%;
@@ -168,4 +182,37 @@ Overwrite Bootstrap CSS
 	height: 60px;
 	width: 90%;
 	margin-left: 5%;
+}
+#desktopnav{
+	background-color: @bodyBackground;
+	height: 45px;
+}
+#bottombar{
+	background-color: @bodyBackground;
+	height: 60px;
+}
+
+#desktopnav a{
+	float: left;
+	display: block;
+	padding: 10px 20px 0px 0px;
+	text-align: left;
+}
+#desktopnav a:last-child{
+	padding-top: 0px;
+	padding-right: @fixedBarMargins;
+	float: right;
+}
+#desktopnav a:first-child{
+	padding-left: @fixedBarMargins;
+}
+#bottombar a{
+	padding-top: 14px;
+	padding-right: @fixedBarMargins;
+	float: right;
+}
+#bottombar h2{
+	padding-top: 8px;
+	padding-left: @fixedBarMargins;
+	display: inline;
 }

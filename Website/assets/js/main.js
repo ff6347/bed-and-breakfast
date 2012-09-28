@@ -107,7 +107,8 @@ function init(){
 	$('.carousel').carousel({
 		interval: 3000
 	});
-	$('#navbarSpy').scrollspy();
+	// $('#navbarSpy').scrollspy();
+	$('.dropdown-toggle').dropdown();
 	initGoogleMap();
 }
 
