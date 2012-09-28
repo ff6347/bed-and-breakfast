@@ -4,73 +4,58 @@ bootstrap build with .less
 by pdxiii & fabiantheblind
 Copyright © 2012
 ************************/
-@hero-bg-col: #ffffff;
 
-@calluna : "calluna", Georgia, serif;
+@import "bootstrap.less";
+@import "responsive.less";
 
-@fontsz_normal: 1.1em;
+// overwriting bootstraps variables
+@bodyBackground:		#333333;
 
-@fontsz_small: 0.9em;
+@sansFontFamily:		"calluna-sans", Helvetica, Arial, sans-serif;
+@serifFontFamily:		"calluna", Georgia, Times, serif;
+@baseFontFamily:		@serifFontFamily;
+@altFontFamily:			@sansFontFamily;
 
-@lineheight: 1.5em;
+@headingsFontFamily:	@sansFontFamily;
+@headingsFontWeight:	normal;
+// @textColor:				#ffffcc;
+@textColor:				@grayLighter;
+@baseLineHeight:		30px;
+@baseFontSize:			20px;
 
-@col-link: #60001b;
+@linkColor:             #cccc66;
+@linkColorHover:        darken(@linkColor, 15%);
 
-@col-hoover: #ff0047;
+@darkRed:				#660000;
 
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
+@fixedBarMargins: 		50px;
+
+
+
+body {
+  padding: 60px;
+  background-image: url(../images/DarkWaveCut.png);
 }
 
+a, a:hover{
+	font-family: @sansFontFamily;
+	font-size: 0.8em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+a:hover, a:active{
+	outline: none;
+}
 
 .container{
-
-
-	h1, h2, h3, h4, h5{
-		font-family:@calluna !important;
-	}
-
-	p{
-		font-size: @fontsz_normal !important;
-	}
-	// li {
-	// 	line-height:@lineheight;
-
-	// 	font-size: @fontsz_normal;
-	// }
 }
-body {
-  // font: normal  1.3em/1.3em !important;
-  line-height: @lineheight !important;
-  padding:60px;
-  font-family: @calluna ,serif;
-  font-size:@fontsz_normal;
-
-  a { 
-
-  	color:@col-link;
-
-  	&:hover{ 
-  		color: @col-hoover;
-  	}
-  }
-
-}
-
-
 
 #separator{
 	width: 100%;
 	text-align: center;
 }
 
-
-
-
 #welcome{
-
 }
 
 /*********************************
@@ -78,23 +63,20 @@ body {
 *********************************/
 
 #bettandbreadrow{
-
 }
 
 #bettandbread{
-
 }
 
 #fruehstueck{
-
 }
 
 /*********************************
 	Bereich Lightbox
 *********************************/
 
-#lb{
 
+#lb{
 
 }
 
@@ -107,15 +89,9 @@ body {
 *********************************/
 
 #headline_akuu{
-
 }
 
 #ankeloheundumgebung, #umgebung, #facilities{
-// font-size: @fontsz_small;
-
-	li{
-	font-size: @fontsz_small;
-	}
 }
 
 #ankeloheundumgebung{
@@ -134,53 +110,35 @@ body {
 *********************************/
 
 #preiseundpolicyintro{
-
 }
 
 
 #preiseundpolicyrow, #policy, #preise{
-
-// font-size: @fontsz_small;
-	li{
-		font-size: @fontsz_small;
-	}
-
 }
 
 #preiseundpolicyrow{
-
 }
 
 #policy{
-
 }
 
 #preise{
-
 }
-
 
 /*********************************
 	BereichKontakt und anfahrt Maps und facebook
 *********************************/
 
 #kontaktundanfahrtrow{
-
-
 }
 
 #kontakt{
-
 }
 
 #anfahrt{
-
-
 }
 
 #gestbook{
-
-
 }
 
 /*********************************
@@ -188,17 +146,13 @@ body {
 *********************************/
 
 #links{
-
 }
-
 
 /*********************************
 	Impressum.html is an own page
 *********************************/
 
 #impressum{
-
-	
 }
 
 /***********************
@@ -206,11 +160,65 @@ Overwrite Bootstrap CSS
 ************************/
 
 .hero-unit{
-	
-font-family: @calluna;
-background-color: @hero-bg-col;
+	background-color: @bodyBackground;
+}
 
-	h1{
-	font-size: 3em !important;
-	}
+#map_canvas {
+	height: 200px;
+	position: relative;
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+	position: fixed;
+}
+#navLinks{
+	width: 80%;
+}
+#ribbon {
+	background-image: url(../images/contactRibbon.png);
+	background-repeat:no-repeat;
+	height: 80px;
+	//width: 214px;
+	margin-top: -5px;
+
+}
+#mobilenav{
+	background-color: @bodyBackground;
+	height: 60px;
+	width: 90%;
+	margin-left: 5%;
+}
+#desktopnav{
+	background-color: @bodyBackground;
+	height: 45px;
+}
+#bottombar{
+	background-color: @bodyBackground;
+	height: 60px;
+}
+
+#desktopnav a{
+	float: left;
+	display: block;
+	padding: 10px 20px 0px 0px;
+	text-align: left;
+}
+#desktopnav a:last-child{
+	padding-top: 0px;
+	padding-right: @fixedBarMargins;
+	float: right;
+}
+#desktopnav a:first-child{
+	padding-left: @fixedBarMargins;
+}
+#bottombar a{
+	padding-top: 14px;
+	padding-right: @fixedBarMargins;
+	float: right;
+}
+#bottombar h2{
+	padding-top: 8px;
+	padding-left: @fixedBarMargins;
+	display: inline;
 }
