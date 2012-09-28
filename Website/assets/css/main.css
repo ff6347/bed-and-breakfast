@@ -41,6 +41,9 @@ body a:hover {
 /*********************************
 	Bereich Lightbox
 *********************************/
+#thumbnails {
+  padding-top: 1em;
+}
 /*********************************
 	Bereich Ankelohe und Umgebung
 *********************************/
