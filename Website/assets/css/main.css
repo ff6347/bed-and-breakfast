@@ -7340,6 +7340,14 @@ body {
   padding: 60px;
   background-image: url(../images/DarkWaveCut.png);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: 0 -1px 1px #666666, 0 1px 1px #ffffff;
+}
 a,
 a:hover {
   font-family: "calluna-sans", Helvetica, Arial, sans-serif;
