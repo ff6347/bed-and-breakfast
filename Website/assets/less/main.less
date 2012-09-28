@@ -20,8 +20,8 @@ Copyright © 2012
 @headingsFontWeight:	normal;
 // @textColor:				#ffffcc;
 @textColor:				@grayLighter;
-@baseLineHeight:		30px;
-@baseFontSize:			20px;
+@baseLineHeight:		32px;
+@baseFontSize:			18px;
 
 @linkColor:             #cccc66;
 @linkColorHover:        darken(@linkColor, 15%);
@@ -32,7 +32,7 @@ Copyright © 2012
 
 @fixedBarMargins: 		50px;
 
-@letterPressShadow: 0 -1px 1px #666666, 0 1px 1px #FFFFFF;
+@letterPressShadow: 0 -1px 1px @grayDarker, 0 1px 1px @grayDark;
 
 body {
   padding: 60px;
@@ -48,6 +48,7 @@ a, a:hover{
 	font-size: 0.8em;
 	text-decoration: none;
 	text-transform: uppercase;
+	letter-spacing:1px;
 }
 
 a:hover, a:active{
@@ -146,6 +147,10 @@ a:hover, a:active{
 }
 
 #gestbook{
+}
+
+#others{
+	// background-color: @bodyBackground;
 }
 
 /*********************************
