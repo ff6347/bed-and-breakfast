@@ -1,20 +1,24 @@
 ---
 layout: default
 title: Bett & Bread "Helene"
----
+---  
 
+<!--  
 <div class="row">
 	<div class="span12">
 <div id="myCarousel" class="carousel slide">
     <div class="carousel-inner">
         {{ 'assets/images/slideshow/*.png'| gallery }}
     </div>
-   <!--  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
+
+    NO CONTROL PLEASE
+   <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>  
 </div>
 </div>
 
+-->
 
 <div class="row">
 <div class="span12" id="welcome">
@@ -151,6 +155,8 @@ span == the span to set for the twitter bootstrap span class
 {% include anfahrt.md %}
 {% endcapture %}
 {{ anfahrt | markdownify }}
+
+{% include map.html %}
 	</div>
 </div> <!-- close kontaktundanfahrt -->
 
