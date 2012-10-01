@@ -43,17 +43,27 @@ h1, h2, h3, h4, h5, h6{
 	text-shadow: @letterPressShadow;
 }
 
+small{
+	font-family: @sansFontFamily;
+}
+
 a, a:hover{
 	font-family: @sansFontFamily;
 	font-size: 0.8em;
 	text-decoration: none;
-	text-transform: uppercase;
 	letter-spacing:1px;
 }
 
-a:hover, a:active{
-	outline: none;
+#topbar a,
+#topbar a:hover,
+#bottombar a,
+#bottombar a:hover{
+	text-transform: uppercase;
 }
+
+// a:hover, a:active{
+// 	outline: none;
+// }
 
 .container{
 }
@@ -233,4 +243,24 @@ Overwrite Bootstrap CSS
 	padding-top: 8px;
 	padding-left: @fixedBarMargins;
 	display: inline;
+}
+
+#singlePreview{
+	background-image: url("../images/single_room_thumb.png");
+}
+#doublePreview{
+	background-image: url("../images/double_room_thumb.png");
+}
+#suitePreview{
+	background-image: url("../images/bellevue_room_thumb.png");
+}
+.roomPreview{
+	height: 100px;
+}
+.price{
+	color: black;
+	background-color: white;
+	float: right;
+	position: static;
+	bottom: -10px;
 }

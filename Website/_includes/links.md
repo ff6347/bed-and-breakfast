@@ -1,5 +1,8 @@
 ###Links: 
 
+[Facebook Link / Icon](http://facebook.de)<br />
+
+
 - [gut-ankelohe](http://www.gut-ankelohe.de)  
 
 - [Moortherme](http://www.moor-therme.de/)  
