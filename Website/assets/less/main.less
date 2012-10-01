@@ -20,21 +20,27 @@ Copyright © 2012
 @headingsFontWeight:	normal;
 // @textColor:				#ffffcc;
 @textColor:				@grayLighter;
-@baseLineHeight:		30px;
-@baseFontSize:			20px;
+@baseLineHeight:		32px;
+@baseFontSize:			18px;
 
 @linkColor:             #cccc66;
 @linkColorHover:        darken(@linkColor, 15%);
 
+
+// own variables
 @darkRed:				#660000;
 
 @fixedBarMargins: 		50px;
 
-
+@letterPressShadow: 0 -1px 1px @grayDarker, 0 1px 1px @grayDark;
 
 body {
   padding: 60px;
   background-image: url(../images/DarkWaveCut.png);
+}
+
+h1, h2, h3, h4, h5, h6{
+	text-shadow: @letterPressShadow;
 }
 
 a, a:hover{
@@ -42,7 +48,9 @@ a, a:hover{
 	font-size: 0.8em;
 	text-decoration: none;
 	text-transform: uppercase;
+	letter-spacing:1px;
 }
+
 a:hover, a:active{
 	outline: none;
 }
@@ -139,6 +147,10 @@ a:hover, a:active{
 }
 
 #gestbook{
+}
+
+#others{
+	// background-color: @bodyBackground;
 }
 
 /*********************************
