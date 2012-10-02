@@ -4,27 +4,28 @@ title: Bett & Bread "Helene"
 ---
 
 {% include topbar.html %}
-<div id="myCarousel" class="carousel slide">
-	<div class="carousel-inner">
-		{{ 'assets/images/slideshow/*.png'| gallery }}
+<div id="container" class="container">
+	<div id="myCarousel" class="carousel slide">
+		<div class="carousel-inner">
+			{{ 'assets/images/slideshow/*.png'| gallery }}
+		</div>
 	</div>
-</div>
-<!--NO CONTROL PLEASE
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
--->
-<div id="welcome">
-	{% include welcome.html %}
-	{% include separator.html %}
-</div>
-<div id="bettAndBread">
-	{% include bettandbread.html %}
-	{% include separator.html %}
-</div>
-<div id="lb">
-	<h3>
-		Tour
-	</h3>
+	<!--NO CONTROL PLEASE
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	-->
+	<div id="welcome">
+		{% include welcome.html %}
+		{% include separator.html %}
+	</div>
+	<div id="bettAndBread">
+		{% include bettandbread.html %}
+		{% include separator.html %}
+	</div>
+	<div id="lb">
+		<h3>
+			Tour
+		</h3>
 <!-- 
 The liquid filter takes the following arguments:
 path == path to image folder
@@ -34,26 +35,28 @@ pathreplace == the path to look for the thumbnails should be in the lightbox fol
 id == the id for the div tag enclosing the single images
 span == the span to set for the twitter bootstrap span class 
  -->
-	<div class="row">
-		{{ 'assets/images/lightbox/*.png'| lightboxgallery : 'lightbox[group]' : 'lightbox/thumbs' : 'thumbnails', 'span2'}}
+		<div class="row">
+			{{ 'assets/images/lightbox/*.png'| lightboxgallery : 'lightbox[group]' : 'lightbox/thumbs' : 'thumbnails', 'span2'}}
 	</div>
 	{% include separator.html %}
-</div>
-<div id="history">
-	{% include history.html %}
-	{% include separator.html %}
-</div>
-<div id="gutUndUmgebung">
-	{% include gutUndUmgebung.html %}
-	{% include separator.html %}
-</div>
-<div id="preise">
-	{% include preise.html %}
-	{% include separator.html %}
-</div>
-<div id="contact">
-	{% include kontaktUndAnfahrt.html %}
-</div>
+	</div>
+	<div id="history">
+		{% include history.html %}
+		{% include separator.html %}
+	</div>
+	<div id="gutUndUmgebung">
+		{% include gutUndUmgebung.html %}
+		{% include separator.html %}
+	</div>
+	<div id="preise">
+		{% include preise.html %}
+		{% include separator.html %}
+	</div>
+	<div id="contact">
+		{% include kontaktUndAnfahrt.html %}
+	</div>
+</div> <!-- end #container-->
+
 <div id="others">
 	{% include others.html %}
 </div>
