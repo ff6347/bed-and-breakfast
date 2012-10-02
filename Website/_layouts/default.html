@@ -13,7 +13,7 @@ subtlpatterns
 <html>
 <head lang="de">
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="Bett $ Bread Helene" />
 	<meta name="author" content="pdxiiiandfabiantheblind" />
 	<title>{{ page.title }}	</title>
@@ -29,12 +29,9 @@ subtlpatterns
 	<!-- Google Analytics -->
 
 </head>
-	<body data-spy="scroll" data-target="#navbarSpy">
-
-		<div class="container">
-
-{{ content }}
-
+	<body>
+		<div id="container" class="container">
+			{{ content }}
 		</div>
 
 		<script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
@@ -44,7 +41,6 @@ subtlpatterns
 		<script type="text/javascript" src="assets/js/bootstrap-dropdown.js"></script>
 		<script type="text/javascript" src="assets/js/lightbox.js"></script>
 		<script type="text/javascript" src="assets/js/main.js"></script>
-
 
 <!-- my jqeuries
 		<script src="assets/js/mediaqueries.js"></script>

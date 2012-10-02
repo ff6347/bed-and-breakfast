@@ -5,11 +5,11 @@ by pdxiii & fabiantheblind
 Copyright © 2012
 ************************/
 
-@import "bootstrap.less";
-@import "responsive.less";
+@import "bootstrap/bootstrap.less";
+// @import "responsive.less";
 
 // overwriting bootstraps variables
-@bodyBackground:		#333333;
+@bodyBackground:		@grayLighter;
 
 @sansFontFamily:		"calluna-sans", Helvetica, Arial, sans-serif;
 @serifFontFamily:		"calluna", Georgia, Times, serif;
@@ -19,11 +19,11 @@ Copyright © 2012
 @headingsFontFamily:	@sansFontFamily;
 @headingsFontWeight:	normal;
 // @textColor:				#ffffcc;
-@textColor:				@grayLighter;
+@textColor:				darken(@red, 15%);
 @baseLineHeight:		32px;
 @baseFontSize:			18px;
 
-@linkColor:             #cccc66;
+@linkColor:             @red;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -32,17 +32,27 @@ Copyright © 2012
 
 @fixedBarMargins: 		50px;
 
-@letterPressShadow: 0 -1px 1px @grayDarker, 0 1px 1px @grayDark;
+@letterPressShadow: 0 -1px 1px @red, 0 1px 1px @white;
+// @letterPressShadow: 0 -1px 1px @textColor, 0 1px 1px @red;
 
 body {
   padding: 60px;
-  background-image: url(../images/DarkWaveCut.png);
+  background-image: url(../images/LightWaveCut.png);
 }
 
 h1, h2, h3, h4, h5, h6{
 	text-shadow: @letterPressShadow;
 }
 
+h2{
+	text-align: center;
+}
+
+p{
+	word-wrap: break-word;
+	text-align: justify;
+	// text-align-last: left;
+}
 small{
 	font-family: @sansFontFamily;
 }
@@ -67,12 +77,16 @@ a, a:hover{
 
 .container{
 }
+#container{
+	margin-top: -30px;
+}
 
 #separator{
 	width: 100%;
 	text-align: center;
 }
-
+#myCarousel{
+}
 #welcome{
 }
 
@@ -147,7 +161,8 @@ a, a:hover{
 	BereichKontakt und anfahrt Maps und facebook
 *********************************/
 
-#kontaktundanfahrtrow{
+#contact{
+	padding-bottom: 60px;
 }
 
 #kontakt{
@@ -156,7 +171,7 @@ a, a:hover{
 #anfahrt{
 }
 
-#gestbook{
+#guestbook{
 }
 
 #others{
@@ -186,7 +201,7 @@ Overwrite Bootstrap CSS
 }
 
 #map_canvas {
-	height: 200px;
+	height: 5*@baseLineHeight;
 	position: relative;
 }
 
@@ -203,48 +218,40 @@ Overwrite Bootstrap CSS
 	height: 80px;
 	//width: 214px;
 	margin-top: -5px;
-
 }
-#mobilenav{
+#topbar, #bottombar{
 	background-color: @bodyBackground;
-	height: 60px;
-	width: 90%;
-	margin-left: 5%;
+	min-width: 960px;
 }
-#desktopnav{
-	background-color: @bodyBackground;
+#topbar{
 	height: 45px;
 }
 #bottombar{
-	background-color: @bodyBackground;
 	height: 60px;
 }
-
-#desktopnav a{
+#topbar a{
 	float: left;
 	display: block;
 	padding: 10px 20px 0px 0px;
 	text-align: left;
 }
-#desktopnav a:last-child{
+#topbar a:first-child{
+	padding-left: @fixedBarMargins;
+}
+#topbar a:last-child{
 	padding-top: 0px;
 	padding-right: @fixedBarMargins;
 	float: right;
 }
-#desktopnav a:first-child{
-	padding-left: @fixedBarMargins;
-}
 #bottombar a{
-	padding-top: 14px;
+	padding-top: 10px;
 	padding-right: @fixedBarMargins;
 	float: right;
 }
 #bottombar h2{
-	padding-top: 8px;
 	padding-left: @fixedBarMargins;
 	display: inline;
 }
-
 #singlePreview{
 	background-image: url("../images/single_room_thumb.png");
 }
@@ -263,4 +270,14 @@ Overwrite Bootstrap CSS
 	float: right;
 	position: static;
 	bottom: -10px;
+}
+#others{
+	position: relative;
+	left: 0px;
+	right: 0px;
+	background-color: @bodyBackground;
+	border-top-style:solid;
+	border-color: @red;
+	border-width: medium;
+	// margin: 0px;
 }

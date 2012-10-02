@@ -3,7 +3,7 @@
 var map;
 var centerLatLng;
 var praxen = [
-	['B&B Helene', 53.63001, 8.89412,"http://dl.dropbox.com/u/4653932/html-HP-LarsWerner/resources/images/GoogleMarker-OL.png"]
+	['B&B Helene', 53.63001, 8.89412,"http://dl.dropbox.com/u/4653932/marker.png"]
 ];
 
 /**
@@ -110,6 +110,7 @@ function init(){
 	// $('#navbarSpy').scrollspy();
 	$('.dropdown-toggle').dropdown();
 	initGoogleMap();
+	$('.typekit-badge').css('bottom', '60px');
 }
 
 onload=function (){
