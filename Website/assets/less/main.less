@@ -16,7 +16,7 @@ Copyright © 2012
 @baseFontFamily:		@serifFontFamily;
 @altFontFamily:			@sansFontFamily;
 
-@headingsFontFamily:	@sansFontFamily;
+@headingsFontFamily:	@serifFontFamily;
 @headingsFontWeight:	normal;
 // @textColor:				#ffffcc;
 @textColor:				darken(@red, 15%);
@@ -33,8 +33,9 @@ Copyright © 2012
 @fixedBarMargins: 		50px;
 
 @letterPressShadow: 0 -1px 1px @red, 0 1px 1px @white;
-// @letterPressShadow: 0 -1px 1px @textColor, 0 1px 1px @red;
+@letterPressShadowOnRed: 0 -1px 1px @gray, 0 1px 1px @red;
 
+@baseCornerRadius:	@baseLineHeight;
 body {
   padding: 60px;
   background-image: url(../images/LightWaveCut.png);
@@ -74,6 +75,18 @@ a, a:hover{
 // a:hover, a:active{
 // 	outline: none;
 // }
+
+.borderRadius01{
+	border-radius: @baseCornerRadius;
+	-moz-border-radius: @baseCornerRadius;
+	-webkit-border-radius: @baseCornerRadius;
+}
+
+.borderRadius02{
+	border-radius: @baseCornerRadius/2;
+	-moz-border-radius: @baseCornerRadius/2;
+	-webkit-border-radius: @baseCornerRadius/2;
+}
 
 .container{
 }
@@ -268,15 +281,47 @@ Overwrite Bootstrap CSS
 #suitePreview{
 	background-image: url("../images/bellevue_room_thumb.png");
 }
+
+.priceTile{
+	.borderRadius02;
+	background-color: @bodyBackground;
+}
 .roomPreview{
-	height: 100px;
+	height: 5 * @baseLineHeight;
+	border-bottom-style:solid;
+	border-color: @red;
+	border-width: medium;
+}
+.pricetag{
+	.borderRadius01;
+	width: @baseLineHeight *2;
+	height: @baseLineHeight *2;
+	background-color: @textColor;
+	float: right;
+	margin-top: -@baseLineHeight;
+	margin-right: -10px;
+	text-align: center;
+	color: @bodyBackground;
+	border: 2px solid @bodyBackground;
+}
+.priceHead{
+	text-align: center;
+	margin-bottom: 8px;
 }
 .price{
-	color: black;
-	background-color: white;
-	float: right;
-	position: static;
-	bottom: -10px;
+	margin-top: @baseLineHeight/2;
+	margin-left: 2px;
+	text-align: center;
+	text-shadow: @letterPressShadowOnRed;
+}
+.digits{
+	font-size: 1.3em;
+	margin-top: @baseLineHeight/3;
+	margin-left: -3px;
+}
+.priceCaption{
+	margin-left: @baseLineHeight/2;
+	margin-right: @baseLineHeight/2;
 }
 #others{
 	width: 100%;
