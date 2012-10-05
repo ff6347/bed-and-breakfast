@@ -15,14 +15,16 @@ title: Bett & Bread "Helene"
 	<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 	-->
 	<div id="welcome">
+		<br />
+		<br />
 		{% include welcome.html %}
-		{% include separator.html %}
 	</div>
 	<div id="bettAndBread">
-		{% include bettandbread.html %}
 		{% include separator.html %}
+		{% include bettandbread.html %}
 	</div>
 	<div id="lb">
+		{% include separator.html %}
 		<h3>
 			Tour
 		</h3>
@@ -38,21 +40,21 @@ span == the span to set for the twitter bootstrap span class
 		<div class="row">
 			{{ 'assets/images/lightbox/*.png'| lightboxgallery : 'lightbox[group]' : 'lightbox/thumbs' : 'thumbnails', 'span2'}}
 		</div>
-	{% include separator.html %}
 	</div>
 	<div id="history">
-		{% include history.html %}
 		{% include separator.html %}
+		{% include history.html %}
 	</div>
 	<div id="gutUndUmgebung">
-		{% include gutUndUmgebung.html %}
 		{% include separator.html %}
+		{% include gutUndUmgebung.html %}
 	</div>
 	<div id="preise">
-		{% include preise.html %}
 		{% include separator.html %}
+		{% include preise.html %}
 	</div>
 	<div id="contact">
+		{% include separator.html %}
 		{% include kontaktUndAnfahrt.html %}
 	</div>
 </div> <!-- end #container-->
