@@ -528,7 +528,7 @@ h4,
 h5,
 h6 {
   margin: 16px 0;
-  font-family: "calluna-sans", Helvetica, Arial, sans-serif;
+  font-family: "calluna", Georgia, Times, serif;
   font-weight: normal;
   line-height: 1;
   color: inherit;
@@ -4920,6 +4920,16 @@ a:hover {
 #bottombar a:hover {
   text-transform: uppercase;
 }
+.borderRadius01 {
+  border-radius: 32px;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+}
+.borderRadius02 {
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+}
 #container {
   margin-top: -30px;
 }
@@ -5025,15 +5035,50 @@ Overwrite Bootstrap CSS
 #suitePreview {
   background-image: url("../images/bellevue_room_thumb.png");
 }
+.priceTile {
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  background-color: #eeeeee;
+}
 .roomPreview {
-  height: 100px;
+  height: 160px;
+  border-bottom-style: solid;
+  border-color: #9d261d;
+  border-width: medium;
+}
+.pricetag {
+  border-radius: 32px;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  width: 64px;
+  height: 64px;
+  background-color: #5c1611;
+  float: right;
+  margin-top: -32px;
+  margin-right: -10px;
+  text-align: center;
+  color: #eeeeee;
+  border: 2px solid #eeeeee;
+}
+.priceHead {
+  text-align: center;
+  margin-bottom: 8px;
 }
 .price {
-  color: black;
-  background-color: white;
-  float: right;
-  position: static;
-  bottom: -10px;
+  margin-top: 16px;
+  margin-left: 2px;
+  text-align: center;
+  text-shadow: 0 -1px 1px #555555, 0 1px 1px #9d261d;
+}
+.digits {
+  font-size: 1.3em;
+  margin-top: 10.666666666666666px;
+  margin-left: -3px;
+}
+.priceCaption {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 #others {
   width: 100%;
