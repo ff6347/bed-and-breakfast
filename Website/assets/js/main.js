@@ -2,8 +2,8 @@
 
 var map;
 var centerLatLng;
-var praxen = [
-	['B&B Helene', 53.63001, 8.89412,"http://dl.dropbox.com/u/4653932/html-HP-LarsWerner/resources/images/GoogleMarker-OL.png"]
+var places = [
+	['B&B Helene', 53.63001, 8.89412,"http://dl.dropbox.com/u/4653932/marker.png"]
 ];
 
 /**
@@ -55,14 +55,14 @@ var praxen = [
 // 		});
 // }
 
-function setGoogleMarkers(praxen){
-	for (var i = 0; i < praxen.length; i++) {
-		var praxis = praxen[i];
+function setGoogleMarkers(places){
+	for (var i = 0; i < places.length; i++) {
+		var place = places[i];
 		var currMarker = new google.maps.Marker({
 			map: map,
-			title: praxis[0],
-			position: new google.maps.LatLng(praxis[1], praxis[2]),
-			icon: new google.maps.MarkerImage(praxis[3]),
+			title: place[0],
+			position: new google.maps.LatLng(place[1], place[2]),
+			icon: new google.maps.MarkerImage(place[3]),
 			animation: google.maps.Animation.DROP
 		});
 		google.maps.event.addDomListener(currMarker, 'click', function() {
@@ -99,7 +99,7 @@ function initGoogleMap() {
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
 	map = new google.maps.Map(mapDiv, myOptions);
-	setGoogleMarkers(praxen);
+	setGoogleMarkers(places);
 }
 // END googlemaps Stuff
 
@@ -107,9 +107,10 @@ function init(){
 	$('.carousel').carousel({
 		interval: 3000
 	});
-	// $('#navbarSpy').scrollspy();
 	$('.dropdown-toggle').dropdown();
 	initGoogleMap();
+	//shift typekit-badge above #bottombar
+	$('.typekit-badge').css('bottom', '60px');
 }
 
 onload=function (){

@@ -3,36 +3,31 @@ layout: default
 title: Bett & Bread "Helene"
 ---
 
-<div class="row">
-	<div class="span12">
-		<div id="myCarousel" class="carousel slide">
-			<div class="carousel-inner">
-{{ 'assets/images/slideshow/*.png'| gallery }}
-			</div>
+{% include topbar.html %}
+<div id="container" class="container">
+	<div id="myCarousel" class="carousel slide">
+		<div class="carousel-inner">
+			{{ 'assets/images/slideshow/*.png'| gallery }}
 		</div>
 	</div>
-</div>
-
-<!--NO CONTROL PLEASE
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
--->
-
-{% include welcome.html %}
-
-{% include bettandbread.html %}
-
-<div id="tour">
-{% include separator.html %}
-</div>
-
-<div class="row">
-	<div class="span12" id="lb">
+	<!--NO CONTROL PLEASE
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	-->
+	<div id="welcome">
+		<br />
+		<br />
+		{% include welcome.html %}
+	</div>
+	<div id="bettAndBread">
+		{% include separator.html %}
+		{% include bettandbread.html %}
+	</div>
+	<div id="lb">
+		{% include separator.html %}
 		<h3>
 			Tour
 		</h3>
-	</div>
-</div> 
 <!-- 
 The liquid filter takes the following arguments:
 path == path to image folder
@@ -42,32 +37,29 @@ pathreplace == the path to look for the thumbnails should be in the lightbox fol
 id == the id for the div tag enclosing the single images
 span == the span to set for the twitter bootstrap span class 
  -->
-<div class="row">
-{{ 'assets/images/lightbox/*.png'| lightboxgallery : 'lightbox[group]' : 'lightbox/thumbs' : 'thumbnails', 'span2'}}
-</div> 
-
-{% include history.html %}
-
-{% include gutUndUmgebung.html %}
-
-{% include preise.html %}
-
-{% include kontaktUndAnfahrt.html %}
-
-<div id="others">
-	<div class="row">
-		<div class="span12" =id="links">
-{% capture links %}
-{% include links.md %}
-{% endcapture %}
-{{ links | markdownify }}
-		</div> <!-- close nichtzuletzt -->
-	</div>
-
-	<div class="row">
-		<div class="span12" id="impressum">
-			<a href="/impressum.html">impressum</a> <br>
-			<a href="/guestbook.html">guestbook</a> <br>
+		<div class="row">
+			{{ 'assets/images/lightbox/*.png'| lightboxgallery : 'lightbox[group]' : 'lightbox/thumbs' : 'thumbnails', 'span2'}}
 		</div>
 	</div>
+	<div id="history">
+		{% include separator.html %}
+		{% include history.html %}
+	</div>
+	<div id="gutUndUmgebung">
+		{% include separator.html %}
+		{% include gutUndUmgebung.html %}
+	</div>
+	<div id="preise">
+		{% include separator.html %}
+		{% include preise.html %}
+	</div>
+	<div id="contact">
+		{% include separator.html %}
+		{% include kontaktUndAnfahrt.html %}
+	</div>
+</div> <!-- end #container-->
+
+<div id="others">
+	{% include others.html %}
 </div>
+{% include bottombar.html %}
