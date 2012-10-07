@@ -152,7 +152,7 @@ body {
   font-family: "calluna", Georgia, Times, serif;
   font-size: 18px;
   line-height: 32px;
-  color: #5c1611;
+  color: #47110d;
   background-color: #eeeeee;
 }
 a {
@@ -1265,7 +1265,7 @@ select:focus:required:invalid:focus {
 }
 .help-block,
 .help-inline {
-  color: #9d261d;
+  color: #872119;
 }
 .help-block {
   display: block;
@@ -4885,8 +4885,202 @@ a.badge:hover {
 .affix {
   position: fixed;
 }
-/************************OVERWRITE*************************
+/*****************LIGHTBOX CSS******************
 
+      __    ____________  ____________  ____ _  __
+     / /   /  _/ ____/ / / /_  __/ __ )/ __ \ |/ /
+    / /    / // / __/ /_/ / / / / __  / / / /   / 
+   / /____/ // /_/ / __  / / / / /_/ / /_/ /   |  
+  /_____/___/\____/_/ /_/ /_/ /_____/\____/_/|_|  
+                                                  
+
+************************************************/
+/* line 6, ../sass/lightbox.sass */
+#lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
+  display: none;
+}
+/* line 15, ../sass/lightbox.sass */
+#lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-weight: normal;
+}
+/* line 24, ../sass/lightbox.sass */
+#lightbox img {
+  width: auto;
+  height: auto;
+}
+/* line 27, ../sass/lightbox.sass */
+#lightbox a img {
+  border: none;
+}
+/* line 30, ../sass/lightbox.sass */
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 39, ../sass/lightbox.sass */
+.lb-container {
+  padding: 10px;
+}
+/* line 42, ../sass/lightbox.sass */
+.lb-loader {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+/* line 51, ../sass/lightbox.sass */
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+/* line 59, ../sass/lightbox.sass */
+.lb-container > .nav {
+  left: 0;
+}
+/* line 62, ../sass/lightbox.sass */
+.lb-nav a {
+  outline: none;
+}
+/* line 65, ../sass/lightbox.sass */
+.lb-prev,
+.lb-next {
+  width: 49%;
+  height: 100%;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  /* Trick IE into showing hover */
+
+  display: block;
+}
+/* line 72, ../sass/lightbox.sass */
+.lb-prev {
+  left: 0;
+  float: left;
+}
+/* line 76, ../sass/lightbox.sass */
+.lb-next {
+  right: 0;
+  float: right;
+}
+/* line 81, ../sass/lightbox.sass */
+.lb-prev:hover {
+  background: url(../images/prev.png) left 48% no-repeat;
+}
+/* line 85, ../sass/lightbox.sass */
+.lb-next:hover {
+  background: url(../images/next.png) right 48% no-repeat;
+}
+/* line 88, ../sass/lightbox.sass */
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 95, ../sass/lightbox.sass */
+.lb-data {
+  padding: 0 10px;
+  color: #bbbbbb;
+}
+/* line 98, ../sass/lightbox.sass */
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+/* line 103, ../sass/lightbox.sass */
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+/* line 107, ../sass/lightbox.sass */
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 11px;
+}
+/* line 112, ../sass/lightbox.sass */
+.lb-data .lb-close {
+  width: 35px;
+  float: right;
+  padding-bottom: 0.7em;
+  outline: none;
+}
+/* line 117, ../sass/lightbox.sass */
+.lb-data .lb-close:hover {
+  cursor: pointer;
+}
+/******************END LIGHTBOX*****************/
+/************************ OWN AND OVERWRITE *************************
+
+
+	   ____ _       ___   __
+	  / __ \ |     / / | / /
+	 / / / / | /| / /  |/ / 
+	/ /_/ /| |/ |/ / /|  /  
+	\____/ |__/|__/_/ |_/   
+	                        
+
+	   ___   
+	  ( _ )  
+	 / __ \/|
+	/ /_/  < 
+	\____/\/ 
+	         
 
 	   ____ _    ____________ _       ______  ________________
 	  / __ \ |  / / ____/ __ \ |     / / __ \/  _/_  __/ ____/
@@ -4905,7 +5099,7 @@ MIXINS END
 *************/
 body {
   padding: 60px;
-  background-image: url(../images/LightWaveCut.png);
+  background-image: url(../images/norwegian_rose.png);
 }
 h1,
 h2,
@@ -4935,80 +5129,27 @@ a:hover {
   text-decoration: none;
   letter-spacing: 1px;
 }
-#topbar a,
-#topbar a:hover,
-#bottombar a,
-#bottombar a:hover {
-  text-transform: uppercase;
-}
-#container {
-  margin-top: -30px;
-}
-.separator {
-  width: 100%;
-  text-align: center;
-}
-/*********************************
-	Bereich Bett and Bread
-*********************************/
-/*********************************
-	Bereich Lightbox
-*********************************/
-#thumbnails {
-  padding-top: 1em;
-}
-/*********************************
-	Bereich Ankelohe und Umgebung
-*********************************/
-/*********************************
-	Bereich Preise und policy
-*********************************/
-/*********************************
-	BereichKontakt und anfahrt Maps und facebook
-*********************************/
-#contact {
-  padding-bottom: 60px;
-}
-/*********************************
-	Bereich Links
-*********************************/
-/*********************************
-	Impressum.html is an own page
-*********************************/
-/***********************
-Overwrite Bootstrap CSS
-************************/
-.hero-unit {
-  background-color: #eeeeee;
-}
-#map_canvas {
-  height: 160px;
-  position: relative;
-}
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  position: fixed;
-}
 #navLinks {
   width: 80%;
 }
-#ribbon {
-  background-image: url(../images/contactRibbon.png);
-  background-repeat: no-repeat;
-  height: 80px;
-  margin-top: -5px;
-}
-#topbar,
-#bottombar {
-  background-color: #cccccc;
+#topbar {
+  background-color: #e7e7e7;
   width: 100%;
   position: fixed;
   z-index: 1100;
   margin-left: -60px;
-}
-#topbar {
   top: 0px;
   height: 45px;
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
+}
+#topbar a,
+#topbar a:hover {
+  text-transform: uppercase;
 }
 #topbar a {
   float: left;
@@ -5016,26 +5157,149 @@ Overwrite Bootstrap CSS
   padding: 10px 20px 0px 0px;
   text-align: left;
 }
-#topbar a :first-child {
-  padding-left: 0;
-}
-#topbar a :last-child {
-  padding-top: 0px;
-  padding-right: 0;
+#contactbutton {
+  width: 150px;
+  height: 150px;
+  background-color: #471b25;
+  border-radius: 75px;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #e1e1e1 !important;
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
+  z-index: 1103;
   float: right;
+  position: fixed;
+  top: -2em;
+  right: 125px;
+}
+#contactbutton h2 {
+  overflow: visible;
+  font-family: "calluna", Georgia, Times, serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 122px;
+  text-shadow: -1.5px -1.5px 2px #434343;
+}
+#contactbutton h2 :before,
+#contactbutton h2 :after {
+  content: attr(title);
+  color: #ffffff;
+}
+#contactbutton h2 :before {
+  top: 1px;
+  left: 1px;
+  opacity: .12;
+}
+#contactbutton h2 :after {
+  top: 2px;
+  left: 2px;
+  opacity: .12;
+}
+#contactbutton a {
+  color: #aaa954;
+}
+#contactbutton a:hover {
+  color: #cccccc;
+}
+#myCarousel {
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #e1e1e1 !important;
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
+}
+#history #postcard {
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #e1e1e1 !important;
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
+  margin-bottom: 3em;
+}
+#history #heleneleft,
+#history #heleneright {
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #e1e1e1 !important;
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
+}
+#history #heleneright {
+  float: right;
+  margin-left: 20px;
+}
+#history #heleneright img {
+  width: 112px;
+  height: 278.59999999999997px;
+}
+#history #heleneleft {
+  float: left;
+  margin-right: 20px;
+}
+#history #heleneleft img {
+  width: 112px;
+  height: 160.29999999999998px;
 }
 #bottombar {
+  background-color: #e7e7e7;
+  width: 100%;
+  position: fixed;
+  z-index: 1100;
+  margin-left: -60px;
   bottom: 0px;
   height: 60px;
 }
-#bottombar a {
-  padding-top: 10px;
-  padding-right: 0;
-  float: right;
+#bottombar a,
+#bottombar a:hover {
+  text-transform: uppercase;
 }
-#bottombar h2 {
-  padding-left: 0;
-  display: inline;
+#bottombar #centerlogo {
+  width: 100px;
+  height: 100px;
+  background-color: #e7e7e7;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1100;
+  top: -80px;
+  position: relative;
+}
+#bottombar #centerlogo img {
+  top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#bottombar #buttonbartxt {
+  margin-top: 20px;
+  font-size: 0.6em;
+}
+#bottombar #buttonbartxt a,
+#bottombar #buttonbartxt a:hover {
+  text-transform: lowercase;
 }
 #quote {
   font-size: 1.2em;
@@ -5053,56 +5317,156 @@ Overwrite Bootstrap CSS
   background-image: url("../images/bellevue_room_thumb.png");
 }
 .priceTile {
-  border-radius: 16px;
-  -moz-border-radius: 16px;
-  -webkit-border-radius: 16px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
   background-color: #eeeeee;
+  background-image: url("../images/greyfloral.png");
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
 }
-.roomPreview {
+.priceTile #tiledistel {
+  width: 36px !important;
+  height: 36px !important;
+}
+.priceTile .priceHead {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.priceTile .roomPreview {
   height: 160px;
   border-bottom-style: solid;
   border-color: #9d261d;
   border-width: medium;
 }
-.pricetag {
+.priceTile .priceCaption {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.priceTile .pricetag {
   border-radius: 32px;
   -moz-border-radius: 32px;
   -webkit-border-radius: 32px;
   width: 64px;
   height: 64px;
-  background-color: #5c1611;
+  background-color: #47110d;
   float: right;
   margin-top: -32px;
   margin-right: -10px;
   text-align: center;
   color: #eeeeee;
-  border: 2px solid #eeeeee;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #e1e1e1 !important;
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
 }
-.priceHead {
-  text-align: center;
-  margin-bottom: 8px;
-}
-.price {
+.priceTile .pricetag .price {
+  color: #aaa954;
+  font-family: "calluna", Georgia, Times, serif;
+  font-style: italic;
+  font-weight: 400;
   margin-top: 16px;
   margin-left: 2px;
   text-align: center;
   text-shadow: 0 -1px 1px #555555, 0 1px 1px #9d261d;
 }
-.digits {
-  font-size: 1.3em;
+.priceTile .pricetag .price .digits {
   margin-top: 10.666666666666666px;
   margin-left: -3px;
 }
-.priceCaption {
-  margin-left: 16px;
-  margin-right: 16px;
-}
 #others {
   width: 100%;
-  background-color: #cccccc;
+  background-color: #e7e7e7;
   border-top-style: solid;
   border-color: #9d261d;
   border-width: medium;
   padding: 0px 60px 0px 60px;
   margin-left: -60px;
 }
+#others h2 img {
+  width: 275px;
+  height: 239.25000000000003px;
+}
+#container {
+  margin-top: -30px;
+}
+.separator {
+  width: 100%;
+  text-align: center;
+}
+#map_canvas {
+  height: 160px;
+  position: relative;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #e1e1e1 !important;
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
+}
+/*********************************
+ Lightbox
+*********************************/
+.lb-image {
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #e1e1e1 !important;
+}
+#thumbnails {
+  padding-top: 1em;
+}
+#thumbnails a img {
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #e1e1e1 !important;
+  -moz-box-shadow: 0px 1px 3px #222222;
+  -webkit-box-shadow: 0px 1px 3px #222222;
+  box-shadow: 0px 1px 3px #222222;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
+  /* IE8 */
+
+}
+/*********************************
+ END Lightbox
+*********************************/
+/***********************
+Overwrite Bootstrap CSS CLASSES
+************************/
+.hero-unit {
+  background-color: #eeeeee;
+}
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+}
+/*********************************
+	Bereich Bett and Bread
+*********************************/
+/*********************************
+	Bereich Ankelohe und Umgebung
+*********************************/
+/*********************************
+	Bereich Preise und policy
+*********************************/
+/*********************************
+	BereichKontakt und anfahrt Maps und facebook
+*********************************/
+/*********************************
+	Bereich Links
+*********************************/
+/*********************************
+	Impressum.html is an own page
+*********************************/
