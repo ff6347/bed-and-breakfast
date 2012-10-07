@@ -109,8 +109,8 @@ function init(){
 	});
 	$('.dropdown-toggle').dropdown();
 	initGoogleMap();
-	//shift typekit-badge above #bottombar
-	$('.typekit-badge').css('bottom', '60px');
+	// shift typekit-badge above #bottombar
+	// $('.typekit-badge').css('bottom', '60px');
 }
 
 onload=function (){

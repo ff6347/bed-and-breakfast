@@ -6,10 +6,24 @@ Copyright © 2012
 ************************/
 
 @import "bootstrap/bootstrap.less";
+
+/************************OVERWRITE*************************
+
+
+	   ____ _    ____________ _       ______  ________________
+	  / __ \ |  / / ____/ __ \ |     / / __ \/  _/_  __/ ____/
+	 / / / / | / / __/ / /_/ / | /| / / /_/ // /  / / / __/   
+	/ /_/ /| |/ / /___/ _, _/| |/ |/ / _, _// /  / / / /___   
+	\____/ |___/_____/_/ |_| |__/|__/_/ |_/___/ /_/ /_____/   
+	                                                          
+
+
+**********************************************************/
 // @import "responsive.less";
 
 // overwriting bootstraps variables
 @bodyBackground:		@grayLighter;
+@barcolor:				#CCCCCC;
 
 @sansFontFamily:		"calluna-sans", Helvetica, Arial, sans-serif;
 @serifFontFamily:		"calluna", Georgia, Times, serif;
@@ -34,11 +48,34 @@ Copyright © 2012
 
 @letterPressShadow: 0 -1px 1px @red, 0 1px 1px @white;
 @letterPressShadowOnRed: 0 -1px 1px @gray, 0 1px 1px @red;
-
 @baseCornerRadius:	@baseLineHeight;
+
+
+
+/**********
+MIXINS
+*************/
+
+.letterspacing(){
+letter-spacing:-0.05em;
+}
+
+.hyphenation(){
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto;
+}
+
+/**********
+MIXINS END
+*************/
+
+
 body {
   padding: 60px;
   background-image: url(../images/LightWaveCut.png);
+
+
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -52,6 +89,7 @@ h2{
 p{
 	word-wrap: break-word;
 	text-align: justify;
+	.hyphenation;
 	// text-align-last: left;
 }
 small{
@@ -76,13 +114,13 @@ a, a:hover{
 // 	outline: none;
 // }
 
-.borderRadius01{
+.borderRadius01(){
 	border-radius: @baseCornerRadius;
 	-moz-border-radius: @baseCornerRadius;
 	-webkit-border-radius: @baseCornerRadius;
 }
 
-.borderRadius02{
+.borderRadius02(){
 	border-radius: @baseCornerRadius/2;
 	-moz-border-radius: @baseCornerRadius/2;
 	-webkit-border-radius: @baseCornerRadius/2;
@@ -232,45 +270,79 @@ Overwrite Bootstrap CSS
 	//width: 214px;
 	margin-top: -5px;
 }
+
 #topbar, #bottombar{
-	background-color: @bodyBackground;
+	background-color: @barcolor;
 	width:100%;
 	position: fixed;
 	z-index: 1100;
 	margin-left: -60px;
 
 }
+
 #topbar{
 	top: 0px;
 	height: 45px;
+
+	a{
+		float: left;
+		display: block;
+		padding: 10px 20px 0px 0px;
+		text-align: left;
+		:first-child{
+			padding-left: 0;
+		}
+		:last-child{
+			padding-top: 0px;
+			padding-right: 0;
+			float: right;
+		}
+	}
+
 }
+
 #bottombar{
 	bottom: 0px;
 	height: 60px;
+
+	 a{
+		padding-top: 10px;
+		padding-right: 0;
+		float: right;
+
+	}
+	
+	 h2{
+		padding-left: 0;
+		display: inline;
+	}
 }
-#topbar a{
-	float: left;
-	display: block;
-	padding: 10px 20px 0px 0px;
-	text-align: left;
-}
-#topbar a:first-child{
-	padding-left: 0;
-}
-#topbar a:last-child{
-	padding-top: 0px;
-	padding-right: 0;
-	float: right;
-}
-#bottombar a{
-	padding-top: 10px;
-	padding-right: 0;
-	float: right;
-}
-#bottombar h2{
-	padding-left: 0;
-	display: inline;
-}
+
+
+// #topbar a{
+// 	float: left;
+// 	display: block;
+// 	padding: 10px 20px 0px 0px;
+// 	text-align: left;
+// }
+
+// #topbar a:first-child{
+// 	padding-left: 0;
+// }
+// #topbar a:last-child{
+// 	padding-top: 0px;
+// 	padding-right: 0;
+// 	float: right;
+// }
+// #bottombar a{
+// 	padding-top: 10px;
+// 	padding-right: 0;
+// 	float: right;
+// }
+// #bottombar h2{
+// 	padding-left: 0;
+// 	display: inline;
+// }
 #quote{
 	font-size: 1.2em;
 }
@@ -330,7 +402,7 @@ Overwrite Bootstrap CSS
 }
 #others{
 	width: 100%;
-	background-color: @bodyBackground;
+	background-color: @barcolor;
 	border-top-style:solid;
 	border-color: @red;
 	border-width: medium;

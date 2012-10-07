@@ -4885,6 +4885,24 @@ a.badge:hover {
 .affix {
   position: fixed;
 }
+/************************OVERWRITE*************************
+
+
+	   ____ _    ____________ _       ______  ________________
+	  / __ \ |  / / ____/ __ \ |     / / __ \/  _/_  __/ ____/
+	 / / / / | / / __/ / /_/ / | /| / / /_/ // /  / / / __/   
+	/ /_/ /| |/ / /___/ _, _/| |/ |/ / _, _// /  / / / /___   
+	\____/ |___/_____/_/ |_| |__/|__/_/ |_/___/ /_/ /_____/   
+	                                                          
+
+
+**********************************************************/
+/**********
+MIXINS
+*************/
+/**********
+MIXINS END
+*************/
 body {
   padding: 60px;
   background-image: url(../images/LightWaveCut.png);
@@ -4903,6 +4921,9 @@ h2 {
 p {
   word-wrap: break-word;
   text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 small {
   font-family: "calluna-sans", Helvetica, Arial, sans-serif;
@@ -4919,16 +4940,6 @@ a:hover {
 #bottombar a,
 #bottombar a:hover {
   text-transform: uppercase;
-}
-.borderRadius01 {
-  border-radius: 32px;
-  -moz-border-radius: 32px;
-  -webkit-border-radius: 32px;
-}
-.borderRadius02 {
-  border-radius: 16px;
-  -moz-border-radius: 16px;
-  -webkit-border-radius: 16px;
 }
 #container {
   margin-top: -30px;
@@ -4989,7 +5000,7 @@ Overwrite Bootstrap CSS
 }
 #topbar,
 #bottombar {
-  background-color: #eeeeee;
+  background-color: #cccccc;
   width: 100%;
   position: fixed;
   z-index: 1100;
@@ -4999,23 +5010,23 @@ Overwrite Bootstrap CSS
   top: 0px;
   height: 45px;
 }
-#bottombar {
-  bottom: 0px;
-  height: 60px;
-}
 #topbar a {
   float: left;
   display: block;
   padding: 10px 20px 0px 0px;
   text-align: left;
 }
-#topbar a:first-child {
+#topbar a :first-child {
   padding-left: 0;
 }
-#topbar a:last-child {
+#topbar a :last-child {
   padding-top: 0px;
   padding-right: 0;
   float: right;
+}
+#bottombar {
+  bottom: 0px;
+  height: 60px;
 }
 #bottombar a {
   padding-top: 10px;
@@ -5088,7 +5099,7 @@ Overwrite Bootstrap CSS
 }
 #others {
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #cccccc;
   border-top-style: solid;
   border-color: #9d261d;
   border-width: medium;
