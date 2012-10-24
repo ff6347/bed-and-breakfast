@@ -3,7 +3,7 @@
 var map;
 var centerLatLng;
 var places = [
-	['B&B Helene', 53.63001, 8.89412,"http://dl.dropbox.com/u/4653932/marker.png"]
+	['B&B Helene', 53.63001, 8.89412,"http://www.helene-gut-ankelohe/assets/images/marker.png"]
 ];
 
 /**
