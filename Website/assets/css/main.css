@@ -133,7 +133,7 @@ textarea {
   clear: both;
 }
 .hide-text {
-  font: a;
+  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -4902,7 +4902,7 @@ a.badge:hover {
   left: 0;
   z-index: 9999;
   background-color: black;
-  filter: progid:dximagetransform.microsoft.alpha(Opacity=85);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
   opacity: 0.85;
   display: none;
 }
@@ -5212,6 +5212,7 @@ a:hover {
   color: #cccccc;
 }
 #myCarousel {
+  max-height: 600px;
   border-style: solid !important;
   border-width: 2px !important;
   border-color: #e1e1e1 !important;
@@ -5221,6 +5222,9 @@ a:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow  (color=#222222, Direction=180, Strength=3)";
   /* IE8 */
 
+}
+#myCarousel .carousel-inner .item {
+  max-height: 600px;
 }
 #history #postcard {
   border-style: solid !important;
@@ -5337,6 +5341,7 @@ a:hover {
   height: 36px !important;
 }
 .priceTile .priceHead {
+  font-size: 20px;
   text-align: center;
   margin-bottom: 8px;
 }
